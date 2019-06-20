@@ -141,6 +141,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         doRequestPermissionsResult(requestCode, grantResults);
+        String code = "";
     }
 
     /**
@@ -157,7 +158,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
         if (System.currentTimeMillis() - lastClick <= 1000) {
             return false;
         }
-        lastClick = System.currentTimeMillis();
+//        lastClick = System.currentTimeMillis();
         return true;
     }
 
